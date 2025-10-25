@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roshan Khadka – Portfolio</title>
+
+  <!-- Prevent light→dark flash for users who picked light -->
+  <script>
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    } catch (e) { }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+
+
+  <!-- Theming for browsers -->
+  <meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+
+  <!-- Favicons + Manifest (place these assets) -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Font Awesome (CDN) with SRI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <a href="#main" class="sr-only">Skip to content</a>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="nav-container container">
+      <div class="site-branding">
+        <img src="assets/logo.png" alt="Roshan Khadka Logo" class="logo" width="112" height="28" loading="eager"
+          decoding="async" />
+        <a href="index.html" class="site-title">Roshan Khadka</a>
+      </div>
+
+      <nav aria-label="Primary">
+        <ul id="primaryNav" class="nav-menu">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#works">Publications</a></li>
+          <li><a href="#certs">Certs</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a class="resume-link"
+              href="assets/Roshan_Resume.pdf" target="_blank"
+              rel="noopener noreferrer">Resume</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <!-- Light/Dark toggle (works with your existing JS) -->
+        <button id="themeToggle" class="toggle" aria-label="Toggle light/dark">🌓</button>
+
+        <!-- Hamburger on the RIGHT -->
+        <button id="menuToggle" class="hamburger" aria-label="Open menu" aria-controls="primaryNav"
+          aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+
+        <!-- Keep or remove this as you wish -->
+        <a class="btn ghost" href="#contact">Say Hello 👋</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container two-col">
+        <div class="card">
+          <div class="profile">
+            <img src="assets/profile.jpg" alt="Portrait of Roshan Khadka" class="profile-pic" width="256"
+              height="256" fetchpriority="high" loading="eager" decoding="async" />
+            <h1 class="name">Roshan Khadka</h1>
+          </div>
+
+          <p class="kicker">Cybersecurity • Systems • Backend Development</p>
+          <p class="tagline">Backend Developer | Network Security Specialist | LeetCode Top 16%</p>
+
+          <p class="subtitle">
+            Computer Science graduate with strong foundations in backend systems, computer networks, and web security. Skilled in Node.js, .NET, and security tools like Burp Suite and Nmap. Seeking to pursue a Master’s in Computer Science with interests in Networking, Systems, and Cybersecurity.
+          </p>
+
+          <div class="row skills-row">
+            <span class="chip skill">C++</span>
+            <span class="chip skill">Java</span>
+            <span class="chip skill">Node.js</span>
+            <span class="chip skill">.NET</span>
+            <span class="chip skill">Spring Boot</span>
+            <span class="chip skill">Burp Suite</span>
+            <span class="chip skill">Nmap</span>
+            <span class="chip skill">CCNA</span>
+</div>
+        </div>
+
+        <div class="card quick-facts">
+    <p class="kicker">Quick Facts</p>
+    <div class="row">
+        <span class="badge"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> IEEE Author</span>
+        <span class="badge"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> B.Tech CSE</span>
+        <span class="badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> CCNA Certified</span>
+    </div>
+    <ul class="meta list">
+        <li>IEEE Conference Publication - Virtual Fitting Rooms</li>
+        <li>CGPA: 8.43/10 - C.V. Raman Global University</li>
+        <li>LeetCode Top 16% (Rating: 1653)</li>
+        <li>.NET Developer Trainee at Bajra Technologies</li>
+    </ul>
+    <p class="availability" role="note">
+        <span class="dot" aria-hidden="true"></span>
+        Seeking Master's in Computer Science
+        <a class="contact-btn" href="mailto:roshankhadka707@gmail.com">Contact →</a>
+    </p>
+
+    <div class="socials" aria-label="Social profiles">
+        <a class="chip social" data-brand="linkedin" href="https://www.linkedin.com/in/roshan-khadka-b155a4222/"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span>
+        </a>
+        <a class="chip social" data-brand="github" href="https://github.com/Jan9e" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> <span>GitHub</span>
+        </a>
+        <a class="chip social" data-brand="medium" href="https://medium.com/@roshankhadka707" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-medium" aria-hidden="true"></i> <span>Medium</span>
+        </a>
+        <a class="chip social" data-brand="leetcode" href="https://leetcode.com/u/Jan9e/" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-code" aria-hidden="true"></i> <span>LeetCode</span>
+        </a>
+        <a class="chip social" data-brand="codechef" href="https://www.codechef.com/users/jan9e" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i> <span>CodeChef</span>
+        </a>
+    </div>
+</div>
+      </div>
+    </section>
+
+<!-- WORK EXPERIENCE -->
+<section id="experience" class="section hover-scope">
+    <div class="container">
+        <h2>Work Experience</h2>
+        <p class="lead">Professional experience in software development and cross-platform application development.</p>
+
+        <div class="grid">
+            <!-- Bajra Technologies -->
+            <article class="card experience-card">
+                <img class="experience-thumb" src="assets/Projects/mediconnect.jpg" alt="MediConnect Appointment Management System" width="960" height="540" loading="lazy" decoding="async" />
+                <div class="experience-body">
+                    <h3>Bajra Technologies</h3>
+                    <p class="meta">Trainee – .NET Developer | Nov 2024 – Feb 2025</p>
+                    <strong>MediConnect – Appointment Management System</strong>
+                    <ul class="meta list">
+                        <li>Developed cross-platform mobile application using .NET MAUI for appointment scheduling and digital record management</li>
+                        <li>Integrated Syncfusion Calendar for doctor availability and appointment booking</li>
+                        <li>Implemented features for doctors to manage schedules and write digital prescriptions</li>
+                        <li>Enabled lab technicians to upload and share medical test reports</li>
+                        <li>Provided patients access to digital prescriptions and medical reports</li>
+                    </ul>
+                    <div class="row">
+                        <span class="pill">.NET MAUI</span>
+                        <span class="pill">Syncfusion</span>
+                        <span class="pill">Cross-Platform</span>
+                        <span class="pill">Healthcare</span>
+                    </div>
+                    <div class="cta-row">
+                        <a class="btn code-btn" href="https://github.com/Jan9e/MediConnect" target="_blank" rel="noopener noreferrer">View Projects →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+    <!-- PROJECTS -->
+<section id="projects" class="section hover-scope">
+    <div class="container">
+        <h2>Projects</h2>
+        <p class="lead">Full-stack applications, AI systems, and backend solutions showcasing diverse technical skills.</p>
+
+        <div class="grid">
+            <!-- Customized Notion-like Web App -->
+            <article class="card project-card">
+                <img class="project-thumb" src="assets/Projects/notion.jpg" alt="Customized Notion-like Web Application" width="960" height="540" loading="lazy" decoding="async" />
+                <div class="project-body">
+                    <h3>Customized Notion-like Web App</h3>
+                    <p class="meta">React.js · PostgreSQL · Node.js · Prisma ORM</p>
+                    <p>Full-stack application with real-time collaboration, rich text editing, and secure authentication.</p>
+                    <div class="row">
+                        <span class="pill">React.js</span>
+                        <span class="pill">Node.js</span>
+                        <span class="pill">PostgreSQL</span>
+                        <span class="pill">Prisma</span>
+                    </div>
+                    <div class="cta-row">
+                        <a class="btn code-btn" href="https://github.com/Jan9e/Notion-Customized" target="_blank" rel="noopener noreferrer">Code →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Cloth Try-on -->
+            <article class="card project-card">
+                <img class="project-thumb" src="assets/Projects/virtual-tryon.png" alt="Virtual Clothes Try-On System" width="960" height="540" loading="lazy" decoding="async" />
+                <div class="project-body">
+                    <h3>Virtual Clothes Try-On System</h3>
+                    <p class="meta">Python · OpenCV · Deep Learning · Computer Vision</p>
+                    <p>AI-powered virtual try-on system using advanced computer vision models for realistic garment fitting.</p>
+                    <div class="row">
+                        <span class="pill">Python</span>
+                        <span class="pill">OpenCV</span>
+                        <span class="pill">Deep Learning</span>
+                        <span class="pill">Computer Vision</span>
+                    </div>
+                    <div class="cta-row">
+                        <a class="btn code-btn" href="" target="_blank" rel="noopener noreferrer">Code →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Educational Institute Website -->
+            <article class="card project-card">
+                <img class="project-thumb" src="assets/Projects/educationalwebsite.png" alt="Educational Institute Website Backend" width="960" height="540" loading="lazy" decoding="async" />
+                <div class="project-body">
+                    <h3>Educational Institute Website Backend</h3>
+                    <p class="meta">Node.js · JWT · Video Streaming · MongoDB</p>
+                    <p>Scalable backend system for educational platform with video streaming and admin controls.</p>
+                    <div class="row">
+                        <span class="pill">Node.js</span>
+                        <span class="pill">JWT</span>
+                        <span class="pill">Video Streaming</span>
+                        <span class="pill">MongoDB</span>
+                    </div>
+                    <div class="cta-row">
+                        <a class="btn code-btn" href="https://github.com/Jan9e/educational-website-backend" target="_blank" rel="noopener noreferrer">Code →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+    <!-- PUBLICATIONS -->
+    <section id="works" class="section hover-scope">
+      <div class="container">
+        <h2>Publications</h2>
+        <div class="grid">
+
+          <!-- Publication 1 -->
+          <article class="card entry-card">
+            <img class="entry-thumb" src="assets/Publications/vfr-paper.jpg" alt="Virtual Fitting Rooms paper cover"
+              width="960" height="540" loading="lazy" decoding="async" />
+            <div class="entry-body">
+              <h3>Advancement in Virtual Fitting Rooms</h3>
+              <p class="meta">15th ICCCNT (IEEE), Nov 2024 · IEEE Xplore</p>
+              <!-- DOI (hard-coded & always visible) -->
+              <p class="refs meta">
+                <strong>DOI:</strong>
+                <a class="doi-link" href="https://doi.org/10.1109/ICCCNT61001.2024.10724276" target="_blank"
+                  rel="noopener noreferrer" aria-label="Open DOI 10.1109/ICCCNT61001.2024.10724276">
+                  10.1109/ICCCNT61001.2024.10724276
+                </a>
+              </p>
+
+              <p>2D try-on stack (segmentation + pose + warping) with texture realism ablations.</p>
+              <div class="row">
+                <span class="pill">Computer Vision</span>
+                <span class="pill">Segmentation</span>
+                <span class="pill">Pose</span>
+              </div>
+              <div class="cta-row">
+                <a class="btn link-btn doi" data-doi="10.1109/ICCCNT61001.2024.10724276"
+                  href="https://ieeexplore.ieee.org/document/10724276" target="_blank" rel="noopener noreferrer">IEEE
+                  Xplore →</a>
+                <a class="btn ghost backup"
+                  href="https://drive.google.com/file/d/1otgsUfyvUCnLaW6yQAyRShDIu6QHolgv/view?usp=sharing"
+                  target="_blank" rel="noopener noreferrer">Backup (Drive) →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+<!-- CERTS & BADGES -->
+<section id="certs" class="section hover-scope">
+  <div class="container">
+    <h2>Certifications & Online Courses</h2>
+    <p class="lead">Industry-recognized certifications and specialized cybersecurity training.</p>
+
+    <div class="grid">
+      <!-- Cisco Endpoint Security -->
+      <article class="card entry-card">
+        <img class="entry-thumb" src="assets/Certs/EndpointSecurity.png" alt="Cisco Endpoint Security Certification" width="960"
+          height="540" loading="lazy" decoding="async" />
+        <div class="entry-body">
+          <h3>Cisco Endpoint Security</h3>
+          <p class="meta"><strong>Completed: September 2025</strong></p>
+          <p>Comprehensive training in endpoint protection, threat detection, and security implementation for enterprise environments.</p>
+          <div class="row">
+            <span class="pill">Endpoint Security</span>
+            <span class="pill">Threat Detection</span>
+            <span class="pill">Cisco Security</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn link-btn" href="https://drive.google.com/file/d/1wsgcnJDGGdC2Pt0GwzBg6ilZmlT90pDJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Certificate →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Securing Software - University of Helsinki -->
+      <article class="card entry-card">
+        <img class="entry-thumb" src="assets/Certs/mooc.png" alt="University of Helsinki Securing Software MOOC" width="960"
+          height="540" loading="lazy" decoding="async" />
+        <div class="entry-body">
+          <h3>Securing Software (MOOC)</h3>
+          <p class="meta"><strong>University of Helsinki · 2025 (Certificate Pending)</strong></p>
+          <p>Advanced software security principles, secure coding practices, and vulnerability prevention methodologies.</p>
+          <div class="row">
+            <span class="pill">Secure Coding</span>
+            <span class="pill">Software Security</span>
+            <span class="pill">Vulnerability</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn link-btn">Certificate Pending</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cisco Introduction to Cybersecurity -->
+      <article class="card entry-card">
+        <img class="entry-thumb" src="assets/Certs/IntroductionToCyberSecurity.png" alt="Cisco Introduction to Cybersecurity" width="960"
+          height="540" loading="lazy" decoding="async" />
+        <div class="entry-body">
+          <h3>Cisco Introduction to Cybersecurity</h3>
+          <p class="meta"><strong>Completed: July 2025</strong></p>
+          <p>Fundamental cybersecurity concepts, network security principles, and introduction to security threats and countermeasures.</p>
+          <div class="row">
+            <span class="pill">Cybersecurity</span>
+            <span class="pill">Network Security</span>
+            <span class="pill">Security Fundamentals</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn link-btn" href="https://drive.google.com/file/d/1S7aL52iLg9Hpdh3IO2fPc0vyH36ly2C_/view?usp=drive_link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CCNAv7 -->
+      <article class="card entry-card">
+        <img class="entry-thumb" src="assets/Certs/CCNA.png" alt="Cisco CCNA Certification" width="960"
+          height="540" loading="lazy" decoding="async" />
+        <div class="entry-body">
+          <h3>Cisco Certified Network Associate (CCNAv7)</h3>
+          <p class="meta"><strong>Completed: May 2022</strong></p>
+          <p>Comprehensive networking knowledge including IP connectivity, network access, security fundamentals, and automation.</p>
+          <div class="row">
+            <span class="pill">Networking</span>
+            <span class="pill">Cisco</span>
+            <span class="pill">IP Routing</span>
+            <span class="pill">Network Security</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn link-btn" href="https://drive.google.com/drive/folders/1mPolVOUt2fpecQIMDvfGRTNqRyM1McrU?usp=sharing" target="_blank" rel="noopener noreferrer">View Certificate →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- BLOG CARDS -->
+<section id="blog" class="section hover-scope">
+  <div class="container">
+    <h2>Blog</h2>
+    <p class="lead">From cybersecurity insights to practical networking knowledge — sharing lessons from hands-on experience.</p>
+
+    <div class="grid">
+      <!-- 1 -->
+      <article class="card post-card">
+        <div class="post-body">
+          <h3 class="post-title">
+            <a href="https://medium.com/@roshankhadka707/securing-software-key-lessons-from-the-university-of-helsinki-mooc-b56f417b8f03"
+              target="_blank" rel="noopener noreferrer">
+              Securing Software: Key Lessons from the University of Helsinki MOOC
+            </a>
+          </h3>
+          <div class="post-meta"><span>Sept 2025</span><span class="dot"></span><span>Medium</span></div>
+          <p class="post-excerpt">Essential insights and practical lessons from the University of Helsinki's Securing Software MOOC, covering secure coding practices and vulnerability prevention.</p>
+          <div class="post-tags">
+            <span class="pill">Software Security</span><span class="pill">Secure Coding</span>
+            <span class="pill">Cybersecurity</span>
+          </div>
+          <div class="post-cta">
+            <a class="btn link-btn"
+              href="https://medium.com/@roshankhadka707/securing-software-key-lessons-from-the-university-of-helsinki-mooc-b56f417b8f03"
+              target="_blank" rel="noopener noreferrer">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="card post-card">
+        <div class="post-body">
+          <h3 class="post-title">
+            <a href="https://medium.com/@roshankhadka707/beyond-firewalls-what-ciscos-endpoint-security-course-taught-me-about-defending-the-weakest-link-4d05d02b255f"
+              target="_blank" rel="noopener noreferrer">
+              Beyond Firewalls: What Cisco's Endpoint Security Course Taught Me About Defending the Weakest Link
+            </a>
+          </h3>
+          <div class="post-meta"><span>Oct 2025</span><span class="dot"></span><span>Medium</span></div>
+          <p class="post-excerpt">Exploring endpoint security principles and defense strategies learned from Cisco's comprehensive security training program.</p>
+          <div class="post-tags">
+            <span class="pill">Endpoint Security</span><span class="pill">Cisco</span>
+            <span class="pill">Network Defense</span>
+          </div>
+          <div class="post-cta">
+            <a class="btn link-btn"
+              href="https://medium.com/@roshankhadka707/beyond-firewalls-what-ciscos-endpoint-security-course-taught-me-about-defending-the-weakest-link-4d05d02b255f"
+              target="_blank" rel="noopener noreferrer">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="card post-card">
+        <div class="post-body">
+          <h3 class="post-title">
+            <a href="https://medium.com/@roshankhadka707/ports-and-nmap-the-hidden-gateways-of-the-internet-every-hacker-and-defender-should-know-42fbd8c21cc2"
+              target="_blank" rel="noopener noreferrer">
+              Ports and Nmap: The Hidden Gateways of the Internet Every Hacker (and Defender) Should Know
+            </a>
+          </h3>
+          <div class="post-meta"><span>Oct 2025</span><span class="dot"></span><span>Medium</span></div>
+          <p class="post-excerpt">A comprehensive guide to network ports and Nmap scanning techniques essential for both offensive security and defensive monitoring.</p>
+          <div class="post-tags">
+            <span class="pill">Network Security</span><span class="pill">Nmap</span>
+            <span class="pill">Penetration Testing</span>
+          </div>
+          <div class="post-cta">
+            <a class="btn link-btn"
+              href="https://medium.com/@roshankhadka707/ports-and-nmap-the-hidden-gateways-of-the-internet-every-hacker-and-defender-should-know-42fbd8c21cc2"
+              target="_blank" rel="noopener noreferrer">Read →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="blog-more">
+      <a class="btn link-btn" href="https://medium.com/@roshankhadka707" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-medium" style="color:#000;"></i> See More on Medium →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="lead">Want to collaborate or chat about research/engineering? I read every message.</p>
+
+        <form action="https://formsubmit.co/roshankhadka707@gmail.com" method="POST">
+          <!-- Redirect to thank-you page after submit -->
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/Portfolio/thankyou.html">
+          <!-- Optional settings -->
+          <input type="hidden" name="_subject" value="Portfolio Contact">
+          <!-- (Removed captcha as requested) -->
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- Visible fields -->
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required autocomplete="name">
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"
+            inputmode="email" pattern="^[A-Za-z0-9][A-Za-z0-9._%+-]*@[A-Za-z0-9.-]+\.[A-Za-z]{2,24}$"
+            title="Use a valid email like name@example.com">
+
+          <label class="sr-only" for="msg">Message</label>
+          <textarea id="msg" name="message" placeholder="How can I help?" required minlength="5"></textarea>
+
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+
+        <p class="meta" style="margin-top:10px;">
+          Or email me directly: <a class="link" href="mailto:roshankhadka707@gmail.com">roshankhadka707@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container foot-flex">
+
+        <!-- Socials Left -->
+        <div class="foot-socials">
+          <a href="https://www.linkedin.com/in/roshan-khadka-b155a4222/" target="_blank" rel="noopener" data-brand="linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Jan9e" target="_blank" rel="noopener" data-brand="github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://medium.com/@roshankhadka707" target="_blank" rel="noopener" data-brand="medium">
+            <i class="fa-brands fa-medium"></i>
+          </a>
+          <a href="https://leetcode.com/u/Jan9e/" target="_blank" rel="noopener" data-brand="leetcode">
+            <i class="fa-solid fa-code"></i>
+          </a>
+          <a href="https://www.codechef.com/users/jan9e" target="_blank" rel="noopener" data-brand="codechef">
+            <i class="fa-solid fa-utensils"></i>
+          </a>
+        </div>
+
+        <!-- Center Branding -->
+        <div class="foot-name">
+          © <span id="year"></span> <strong>Roshan Khadka</strong>
+        </div>
+
+        <!-- Resume Right -->
+        <div class="foot-cta">
+          <a class="resume-btn" href="assets/Roshan_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>
